@@ -1,3 +1,7 @@
+// This code is executed on the backend server.
+//It takes in the GET,POST,PUT and DELETE requests from the front end performs the functionalities
+
+
 const express = require('express');
 app.use(express.json());
 const data=[
@@ -59,7 +63,7 @@ app.post('/api/v3/app/events',(req,res)=>{
 app.put('/api/v3/app/events/',(req,res)=>{
     let obj=req.query.id;
     res.send("Put request obtained....");
-    //We can then update the event using this ID
+    //We can then update the event using this ID if we have a database
 })
 
 app.delete('/api/v3/app/events/',(req,res)=>{
